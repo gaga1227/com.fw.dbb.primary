@@ -1,0 +1,39 @@
+@font-face {
+	font-family: 'fwicon';
+	src:url('fonts/fwicon.eot');
+	src:url('fonts/fwicon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/fwicon.svg#fwicon') format('svg'),
+		url('fonts/fwicon.woff') format('woff'),
+		url('fonts/fwicon.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'fwicon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="fwicon-"]:before, [class*=" fwicon-"]:before {
+	font-family: 'fwicon';
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.fwicon-users:before {
+	content: "\e029";
+}
+.fwicon-comment:before {
+	content: "\e02c";
+}
+.fwicon-pencil:before {
+	content: "\e046";
+}

@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* ------------------------------------------------------------------------------ */
+/* image object styles (for fckstyles.xml) */
+/* ------------------------------------------------------------------------------ */
+
+/* ------------------------------------------------------------------------------ */
+/* image styles */
+.contentViewport .borderedImage 		{ display:block; background-color:#fff; overflow:hidden; }
+.contentViewport .fullWidthImage 		{ display:block; width:100%; height:auto; margin:0 auto 20px auto; padding:0; overflow:hidden; }
+.contentViewport .leftAligned			{ display:block; height:auto; float:left; margin:0 20px 10px 0; overflow:hidden; width:auto; max-width:45% }
+.contentViewport .rightAligned 			{ display:block; height:auto; float:right; margin:0 0 10px 20px; overflow:hidden; width:auto; max-width:45% } 
+.contentViewport .imgWrapper 			{ margin: 20px 0; overflow: hidden; }
+
+.contentViewport .caption {  
+    clear: both !important;
+    display: block !important;
+    float: none !important;
+    margin: 0 !important; 
+    color: #494949;
+    display: block;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 20px;
+    margin: 0 0 20px;
+    padding: 10px;
+	font-style:italic;
+}
+ 
+
+/* ================================================================================================== */
+/*  IMAGE PROFILES */
+/* ================================================================================================== */
+.contentViewport .imgWrapper_250 					 { width:41%; padding: 7px; }/*(250/640)x100*/  
+.contentViewport .imgWrapper_640					 { width:100%; margin:20px 0; } 
+
+/*two up*/
+.contentViewport .imgWrapper_310 					 { width: 48%; } /*(310/640)x100*/  
+.contentViewport .imgWrapper.gap_20 div.first-child  { margin: 0; padding: 0; }
+.contentViewport .imgWrapper.gap_20 div 			 { margin-left: 18px; float: left;} 
+
+/*setting image size stay inside the wrapper*/
+.contentViewport .imgWrapper_250 img{ width:96%; } 
+.contentViewport .imgWrapper_310 img{ width:98%; } 
+.contentViewport .imgWrapper_640 img{ width:98%; } 
+
+@media only screen and (max-width:540px) {
+.contentViewport .imgWrapper_640					 { width:96%; } 
+.contentViewport .imgWrapper_310 					 { width:47%; } 
+.contentViewport .imgWrapper 						 { width: 99%; }
+}
+
+@media only screen and (max-width:360px) { 
+.contentViewport .imgWrapper_310 					 { width:45%; } 
+}

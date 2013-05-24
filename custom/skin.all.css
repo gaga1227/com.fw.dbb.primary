@@ -1,0 +1,537 @@
+@charset "utf-8";
+/* ------------------------------------------------------------------------------ 
+   LAST UPDTAE:
+	- JX 20121206
+   
+   NOTES:
+	- This document uses a special class on 'body' tag to override default rules.   
+	- All custom rules to be under the scope of 'body.skinned' 
+	- Please update this file ONLY!
+   ------------------------------------------------------------------------------ */
+   
+   
+/* ================================================================================================== */
+/* INDEX */
+/* ================================================================================================== */
+
+/* ------------------------------------------------------------------------------ 
+	1. structure - GLOBAL
+	2. structure - PAGEBG
+	3. structure - HEADER
+	4. structure - NAV
+	5. structure - NAVITEMS
+	6. structure - CONTENT SHELL
+	7. structure - MEGAFOOTER
+	8. structure - FOOTER
+	9. structure - SECHEADER
+	10.structure - PAGINATION
+	11.common - BUTTONS
+	12.common - CONTENTVIEWPORT
+	13.section - NEWS & EVENTS
+	14.section - HOME
+	15.widget - VIDEO PLAYER
+	16.widget - SLIDESHOW
+   ------------------------------------------------------------------------------ */
+   
+/* ================================================================================================== */
+/* structure - GLOBAL */
+/* ================================================================================================== */
+
+/* body base bg color */
+body.skinned { background:#03115a; }
+
+/* ================================================================================================== */
+/* structure - PAGEBG */
+/* ================================================================================================== */
+
+body#home.skinned #news .newsItem .padder {
+	height: 78px;
+}
+
+/* body bottom gradient */
+.skinned #pageBg .bgGradient { 
+	/*background-gradient*/
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#03115a), color-stop(100%,#143a83));
+	background-image:-webkit-linear-gradient(top, #03115a 0%, #143a83 100%);
+	background-image:-moz-linear-gradient(top, #03115a 0%, #143a83 100%);
+	background-image:-o-linear-gradient(top, #03115a 0%, #143a83 100%);
+	background-image:linear-gradient(to bottom, #03115a 0%, #143a83 100%);
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#03115a, endColorstr=#143a83);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#03115a, endColorstr=#143a83); }
+
+/* body bottom center radial gradient */
+.skinned #pageBg .bgShade { background:#143a83; /*box-shadow*/-webkit-box-shadow:0px 0px 300px 300px #143a83; box-shadow:0px 0px 300px 300px #143a83; }
+
+/* content page banner bg */
+.skinned #pageBg .bgBanner { background-image:url(img-banner.jpg); }
+	
+/* ================================================================================================== */
+/* structure - HEADER */
+/* ================================================================================================== */
+
+/* header bg base colour */
+.skinned #header .bgShape { background:#02215e; }
+
+/* header bg radial gradient */
+.skinned #header .bgShade { background:#3b70c2; /*box-shadow*/-webkit-box-shadow:0px 0px 200px 200px #3b70c2; box-shadow:0px 0px 200px 200px #3b70c2; }
+
+/* header left border line */
+.skinned #header .bgBorder { 
+	/*background-gradient*/
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(93,148,212,1)), color-stop(100%,rgba(93,148,212,0)));
+	background-image:-webkit-linear-gradient(top, rgba(93,148,212,1) 0%, rgba(93,148,212,0) 100%);
+	background-image:-moz-linear-gradient(top, rgba(93,148,212,1) 0%, rgba(93,148,212,0) 100%);
+	background-image:-o-linear-gradient(top, rgba(93,148,212,1) 0%, rgba(93,148,212,0) 100%);
+	background-image:linear-gradient(to bottom, rgba(93,148,212,1) 0%, rgba(93,148,212,0) 100%);
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff5d94d4, endColorstr=#005d94d4);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff5d94d4, endColorstr=#005d94d4); }
+
+/* header responsive */
+@media only screen and (max-width:800px) {
+
+	/* header bg radial gradient */
+	.skinned #header .bgShade { /*box-shadow*/-webkit-box-shadow:0px 50px 100px 100px #3b70c2; box-shadow:0px 50px 100px 100px #3b70c2; }
+		
+}
+@media only screen and (max-width:400px) {
+	
+	/* header bg radial gradient */
+	.skinned #header .bgShade { /*box-shadow*/-webkit-box-shadow:0px 0px 120px 120px #3b70c2; box-shadow:0px 0px 120px 120px #3b70c2; }
+
+}
+
+/* ================================================================================================== */
+/* structure - NAV */
+/* ================================================================================================== */
+	
+/* main nav bg */
+.skinned #nav .bgShape { background:#0098e0; }
+	
+/* main nav bg bottom shade */
+.skinned #nav .bgShade { background:#42a9f0; /*box-shadow*/-webkit-box-shadow:0px 0px 200px 200px #42a9f0; box-shadow:0px 0px 200px 200px #42a9f0; }
+
+/* navSelect */
+.skinned #nav #navSelect { color:#fff; border-bottom-color:#1181cf; }
+		
+/* interaction */
+.skinned #nav #navSelect:hover,
+.skinned #nav #navSelect:focus,
+.skinned #nav #navSelect:active { background:rgba(0,0,0,0.3); }
+
+/* ------------------------------------------------------------------------------ */
+/* nav responsive */ 
+@media only screen and (max-width:800px) {
+	
+	/* bg for navItems */
+	.skinned #nav #navItems { background:rgba(0,0,0,0.05); }
+	
+	/* interaction */
+	.skinned #nav #navItems .navItem a:hover,
+	.skinned #nav #navItems .navItem a:focus,
+	.skinned #nav #navItems .navItem a:active { background:rgba(255,255,255,0.3); }	
+	
+	/* selected link */
+	.skinned #nav #navItems .navItem.selected a { background:#003b77; }
+	.skinned #nav #navItems .navItem.selected a:hover,
+	.skinned #nav #navItems .navItem.selected a:focus,
+	.skinned #nav #navItems .navItem.selected a:active { color:#fbc112; background:#003b77; }
+
+	/* selected list */
+	.skinned #nav #navItems .navItem a.selected,
+	.skinned #nav #navItems .navItem a.selected:hover,
+	.skinned #nav #navItems .navItem a.selected:focus,
+	.skinned #nav #navItems .navItem a.selected:active { background:#003b77; }
+	
+}
+
+/* ================================================================================================== */
+/* structure - NAVITEMS */
+/* ================================================================================================== */
+
+/* navItem bottom border color */
+.skinned .navItems > .navItem { border-bottom-color:#1181cf; }
+
+/* navItem general text and link color */
+.skinned .navItems,
+.skinned .navItems ul,
+.skinned .navItems li,
+.skinned .navItems .navItem,
+.skinned .navItems .navItem a { color:#fff; }
+
+/* navItem hover color */
+.skinned .navItems .navItem a:hover,
+.skinned .navItems .navItem a:focus,
+.skinned .navItems .navItem a:active { color:#003b77; }
+
+/* navItem selected color */
+.skinned .navItems .navItem a.selected,
+.skinned .navItems .navItem a.selected:hover,
+.skinned .navItems .navItem a.selected:focus,
+.skinned .navItems .navItem a.selected:active { color:#fbc112; }
+
+/* navItem bullet color */
+.skinned .navItems .navItem .bullet { background:#fff; } 
+
+/* navItem hover bullet color */
+.skinned .navItems .navItem a:hover .bullet,
+.skinned .navItems .navItem a:focus .bullet,
+.skinned .navItems .navItem a:active .bullet { background:#003b77; }	
+
+/* navItem selected bullet color */
+.skinned .navItems .navItem a.selected .bullet,
+.skinned .navItems .navItem a.selected:hover .bullet,
+.skinned .navItems .navItem a.selected:focus .bullet,
+.skinned .navItems .navItem a.selected:active .bullet { background:#fbc112; }
+
+/* ================================================================================================== */
+/* structure - CONTENT SHELL */
+/* ================================================================================================== */
+
+/* main content bg colour */
+.skinned #main { background:#fff; }
+
+/* sideNav bg colouor */
+.skinned #sideNav { background:#0098E0; }
+
+/* ================================================================================================== */
+/* structure - MEGAFOOTER */
+/* ================================================================================================== */
+
+/* base bg color */
+.skinned #megaFooter .bgPattern { background-color:#104071; }
+		
+/* top bg Shadow */
+.skinned #megaFooter .bgShadow { /*box-shadow*/-webkit-box-shadow:0px 0px 30px 0px rgba(0,0,0,0.5); box-shadow:0px 0px 30px 0px rgba(0,0,0,0.5); }
+	
+/* dbb bg img */
+.skinned #megaFooter .content #dbb { background-image:url(img-dbb.png); }
+			
+/* dbb bg Shade */
+.skinned #megaFooter .content #dbb .bgShade { background:rgba(255,255,255,0.05); /*box-shadow*/-webkit-box-shadow:0px 0px 130px 130px rgba(255,255,255,0.05); box-shadow:0px 0px 130px 130px rgba(255,255,255,0.05); }
+			
+/* link label */
+.skinned #megaFooter .content .sec .btnText,
+.skinned #megaFooter .content .sec .btnText .label { color:#fff!important; }
+.skinned #megaFooter .content .sec .btnText:hover .label,
+.skinned #megaFooter .content .sec .btnText:focus .label,
+.skinned #megaFooter .content .sec .btnText:active .label { color:#8de2fb!important; }
+
+/* link icon */
+.skinned #megaFooter .content .sec .btnText .icon { color:#8de2fb; }
+	
+/* details text */
+.skinned #megaFooter .content #secContact .details { color:#fff; }
+				
+/* details link */
+.skinned #megaFooter .content #secContact .details a { color:#8de2fb; }
+
+/* ================================================================================================== */
+/* structure - FOOTER */
+/* ================================================================================================== */
+
+/* footer base bg color */ 
+.skinned #footer { background-color:#002853; }
+
+/* footer link text color */
+.skinned #footerLinks,
+.skinned #footerLinks li { color:#fff;  }
+
+/* footer link sep border color */
+.skinned #footerLinks li { border-color:#ccc; }
+		
+/* footer link colors */
+.skinned #footerLinks li a { color:#fff; }
+.skinned #footerLinks li a:hover,
+.skinned #footerLinks li a:focus { color:#fff; }
+
+/* ================================================================================================== */
+/* structure - SECHEADER */
+/* ================================================================================================== */
+
+/* secHeader colors */
+.skinned #secHeader { color:#fff; background:#9f1570; border-left-color:#ff2ade; }
+
+/* bgShade color */
+.skinned #secHeader .bgShade { background:#ca3296; /*box-shadow*/-webkit-box-shadow:0px 0px 300px 300px #ca3296; box-shadow:0px 0px 300px 300px #ca3296; }
+
+/* ================================================================================================== */
+/* structure - PAGINATION */
+/* ================================================================================================== */
+
+/* pagination theme colours */
+.skinned .pagination { color:#004c99; background:#fff; border-color:#cecece; }
+
+/* pagination info text color */
+.skinned .pagination .info { color:#004c99; }
+		
+/* pagination common button colour */
+.skinned .pagination .btnPrevNext,
+.skinned .pagination .btnPage { color:#7e7e7e; }
+
+/* pagination btnPrevNext icon colour */
+.skinned .pagination .btnPrevNext .icon { color:#a7b2b8; }
+.skinned .pagination .btnPrevNext:hover .icon,
+.skinned .pagination .btnPrevNext:focus .icon,
+.skinned .pagination .btnPrevNext:active .icon { color:#19457d; }
+.skinned .pagination .btnPrevNext.disabled .icon,
+.skinned .pagination .btnPrevNext.disabled:hover .icon,
+.skinned .pagination .btnPrevNext.disabled:focus .icon,
+.skinned .pagination .btnPrevNext.disabled:active .icon { color:#a7b2b8!important; }
+	
+/* pagination btnPage */
+.skinned .pagination .btnPage:hover,
+.skinned .pagination .btnPage:focus,
+.skinned .pagination .btnPage:active { color:#fff; background:#004c99; }
+.skinned .pagination .btnPage.selected,
+.skinned .pagination .btnPage.selected:hover,
+.skinned .pagination .btnPage.selected:focus,
+.skinned .pagination .btnPage.selected:active { color:#fff; background:#66cef5; }
+
+/* ================================================================================================== */
+/* common - BUTTONS */
+/* ================================================================================================== */
+
+/* btnText text colour */
+.skinned .btnText,
+.skinned .btnText .label { color:#00aeef!important; }	
+.skinned .btnText:hover .label,
+.skinned .btnText:focus .label,
+.skinned .btnText:active .label { color:#0055ac!important; }
+	
+/* btnText icon colour */
+.skinned .btnText .icon { color:#00aeef; }
+
+/* btnBox bg colour */
+.skinned .btnBox { background:#18437e; }
+.skinned .btnBox:hover,
+.skinned .btnBox:focus,
+.skinned .btnBox:active { background:#00aeef; }
+
+/* btnBox text colour */
+.skinned .btnBox,
+.skinned .btnBox .label { color:#fff!important; }
+
+/* ================================================================================================== */
+/* common - CONTENTVIEWPORT */
+/* ================================================================================================== */
+
+/* headings and paragraph */
+.skinned h1.heading,
+.skinned .contentViewport h1 { color:#19457d; }
+.skinned .contentViewport h2 { color:#494949; }
+.skinned .contentViewport h3 { color:#3c3c3c; }
+.skinned .contentViewport h4 { color:#3c3c3c; }  
+.skinned .contentViewport p  { color:#3c3c3c; }
+
+/* link */
+.skinned .contentViewport a { color:#00aeef; }
+.skinned .contentViewport a:hover,
+.skinned .contentViewport a:focus { color:#0055ac; }
+
+/* leaderText */
+.skinned .contentViewport .leaderText  { color:#0055ac; border-bottom-color:#fdd32d; }
+
+/* blockquote */
+.skinned .contentViewport blockquote,
+.skinned .contentViewport blockquote p,
+.skinned .contentViewport blockquote li,
+.skinned .contentViewport .quote,
+.skinned .contentViewport .blockquote { color:#3c3c3c; }
+
+/* cite */
+.skinned .contentViewport cite,
+.skinned .contentViewport .cite { color:#22b9f1; }
+
+/* acronym */
+.skinned .contentViewport acronym { border-bottom-color:#666; }
+
+/* caption */
+.skinned .contentViewport .caption { }
+
+/* date */
+.skinned .contentViewport .date { color:#3c3c3c; }
+
+/* note */
+.skinned .contentViewport .note { color:#222; }
+
+/* reference */ 
+.skinned .contentViewport .reference { color:#777; }
+
+/* title */ 
+.skinned .contentViewport .title { color:#222; }
+
+/* divider */
+.skinned .dividerSolid,
+.skinned .contentViewport .dividerSolid { border-top-color:#fdd32d; }
+.skinned .dividerPattern,
+.skinned .contentViewport .dividerPattern { background-image:url(bg-pattern-divider.png); }
+.skinned .dividerLite,
+.skinned .contentViewport .dividerLite { border-top-color:#9f9e9e; }
+
+/* list */
+.skinned .contentViewport li { color:#3c3c3c; }
+.skinned .contentViewport li { background:url(blt-list-lv1.png) 1px 8px no-repeat; }
+.skinned .contentViewport ol li { background:none; }
+.skinned .contentViewport li li { background:url(blt-list-lv2.png) 1px 8px no-repeat; }
+.skinned .contentViewport li ol li { background:none; }
+.ie7 .skinned .contentViewport ul > li { background:url(blt-list-lv1.png) 3px 8px no-repeat; }
+.ie7 .skinned .contentViewport li ul li { background:url(blt-list-lv2.png) 3px 8px no-repeat; }
+
+/* special boxes */
+.skinned .contentViewport .specialBox { color:#3c3c3c; background:#e9f9ff; border-color:#03a2e1; }
+.skinned .contentViewport .specialBox .title { color:#222; }	
+.skinned .contentViewport .specialBox .icon { color:#03a2e1; }
+
+/* styledTable */
+.skinned .contentViewport .styledTable { color:#3c3c3c; border-bottom-color:#18437e; }
+.skinned .contentViewport .styledTable td { border-bottom-color:#00aeef; }
+.skinned .contentViewport .styledTable th,
+.skinned .contentViewport .styledTable th p { background:#18437e; color:#fff; }
+.skinned .contentViewport .styledTable td.highlight { background:#eaf9ff; }
+
+/* layoutMode */
+.skinned .contentViewport table.layoutMode { color:#3c3c3c; }
+
+/* image styles */
+.skinned .contentViewport img.borderedImage { border-color:#03a2e1; background-color:#fff; }
+
+/* ================================================================================================== */
+/*  SECTION - NEWS & EVENTS 
+/* ================================================================================================== */    
+	
+/* newsItem bg */
+.skinned #newsListing .newsItem { background-image:url(bg-pattern-divider.png); }
+	
+/* date */
+.skinned #newsListing .newsItem .padder .date { color:#00aeef; }
+
+/* title */
+.skinned #newsListing .newsItem .padder .title { color:#004c99; }
+.skinned #newsListing .newsItem .padder .title a { color:#004c99; }
+.skinned #newsListing .newsItem .padder .title a:hover,
+.skinned #newsListing .newsItem .padder .title a:focus,
+.skinned #newsListing .newsItem .padder .title a:active { color:#003b77; }
+			
+/* desc */
+.skinned #newsListing .newsItem .padder .desc { color:#3c3c3c; }
+
+/* ================================================================================================== */
+/*  SECTION - HOME
+/* ================================================================================================== */    
+	
+/* bgBanner */
+.skinned#home #pageBg .bgBanner { background-image:url(img-banner-home.jpg); }
+
+/* ------------------------------------------------------------------------------ */
+/* welcome */
+
+/* bg */
+.skinned#home #welcome .bgShape { background:#82155d; }
+
+/* bgShade */
+.skinned#home #welcome .bgShade { background:#c83094; /*box-shadow*/-webkit-box-shadow:0px 0px 300px 300px #c83094; box-shadow:0px 0px 300px 300px #c83094; }
+
+/* bgBorder */
+.skinned#home #welcome .bgBorder { 
+	/*background-gradient*/
+	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,96,255,1)), color-stop(100%,rgba(255,96,255,0)));
+	background-image:-webkit-linear-gradient(top, rgba(255,96,255,1) 0%, rgba(255,96,255,0) 100%);
+	background-image:-moz-linear-gradient(top, rgba(255,96,255,1) 0%, rgba(255,96,255,0) 100%);
+	background-image:-o-linear-gradient(top, rgba(255,96,255,1) 0%, rgba(255,96,255,0) 100%);
+	background-image:linear-gradient(to bottom, rgba(255,96,255,1) 0%, rgba(255,96,255,0) 100%);
+	-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffff60ff, endColorstr=#00ff60ff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffff60ff, endColorstr=#00ff60ff); }
+	
+/* heading */
+.skinned#home #welcome .padder .heading { color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,0.3); }
+	
+/* text */
+.skinned#home #welcome .padder p { color:#fff; }
+
+/* ------------------------------------------------------------------------------ */
+/* news */
+.skinned#home #news { background:#fcd704; }
+
+/* heading */
+.skinned#home #news .heading { color:#0b479e; text-shadow:0 1px 0 rgba(255,255,255,0.5); }
+	
+/* date */
+.skinned#home #news .newsItem .padder .date { color:#ca168c; }
+
+/* title */
+.skinned#home #news .newsItem .padder .title,
+.skinned#home #news .newsItem .padder .title a { color:#0055ac; }
+.skinned#home #news .newsItem .padder .title a:hover,
+.skinned#home #news .newsItem .padder .title a:focus,
+.skinned#home #news .newsItem .padder .title a:active { color:#003b77; }
+
+/* btnNav */
+.skinned#home #news .controls .btnNav { background:#fff; }
+.skinned#home #news .controls .btnNav:hover,
+.skinned#home #news .controls .btnNav:focus,
+.skinned#home #news .controls .btnNav:active { background:#1e4488; }
+	
+/* icon */
+.skinned#home #news .controls .btnNav .icon { color:#1e4488; }
+.skinned#home #news .controls .btnNav .icon:hover,
+.skinned#home #news .controls .btnNav .icon:focus,
+.skinned#home #news .controls .btnNav .icon:active { color:#fff; }
+
+/* btnSlide */
+.skinned#home #news .controls .pager .btnSlide { background:#fff; }
+.skinned#home #news .controls .pager .btnSlide:hover,
+.skinned#home #news .controls .pager .btnSlide:focus,
+.skinned#home #news .controls .pager .btnSlide:active { background:#00aeef; }
+
+/* activeSlide */
+.skinned#home #news .controls .pager .btnSlide.activeSlide,
+.skinned#home #news .controls .pager .btnSlide.activeSlide:hover,
+.skinned#home #news .controls .pager .btnSlide.activeSlide:focus,
+.skinned#home #news .controls .pager .btnSlide.activeSlide:active { background:#1e4488; }
+
+/* ------------------------------------------------------------------------------ */
+/* actions */
+	
+/* icon */
+.skinned#home #actions .btnAction .icon { color:#fff; background:#03a2e1; }
+.skinned#home #actions .btnAction:hover .icon,
+.skinned#home #actions .btnAction:focus .icon,
+.skinned#home #actions .btnAction:active .icon { color:#fff; background:#ffcb00; }
+
+/* label */
+.skinned#home #actions .btnAction .label { color:#03a2e1; }
+.skinned#home #actions .btnAction:hover .label,
+.skinned#home #actions .btnAction:focus .label,
+.skinned#home #actions .btnAction:active .label { color:#ffcb00; }
+	
+/* ================================================================================================== */
+/*  widget - VIDEO PLAYER
+/* ================================================================================================== */    
+
+/*control btns*/
+.skinned .vjs-fw-skin .vjs-control:hover div,
+.skinned .vjs-fw-skin .vjs-control:focus div,
+.skinned .vjs-fw-skin .vjs-control:active div,
+
+/*progress bar*/
+.skinned .vjs-fw-skin .vjs-play-progress,
+
+/*big play btn*/
+.skinned .vjs-fw-skin div.vjs-big-play-button:hover span,
+.skinned .vjs-fw-skin div.vjs-big-play-button:focus span,
+.skinned .vjs-fw-skin div.vjs-big-play-button:active span { background-color:#0799d4!important; }
+
+/*override time controls*/
+.skinned .vjs-fw-skin .vjs-time-controls,
+.skinned .vjs-fw-skin .vjs-time-controls div,
+.skinned .vjs-fw-skin .vjs-time-controls:hover div,
+.skinned .vjs-fw-skin .vjs-time-controls:focus div,
+.skinned .vjs-fw-skin .vjs-time-controls:active div { background-color:transparent!important; }
+
+/* ================================================================================================== */
+/*  widget - SLIDESHOW
+/* ================================================================================================== */    
+
+/*nav btns*/
+.skinned .slideshow .btnPrev,
+.skinned .slideshow .btnNext { background-image:url(slideshow-btn-nav.png); }

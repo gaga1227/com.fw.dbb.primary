@@ -1568,7 +1568,7 @@ body#home #actions { position:absolute; bottom:0; left:0; width:690px; height:45
 /* newsListing responsive */	
 @media only screen and (max-width:500px) {
 	
-	#content #newsListing .newsItem { min-height: auto;} 
+	#content #newsListing .newsItem { min-height:0; } 
 	
 	/* newsItem smaller left gap */
 	#newsListing .newsItem { padding:0 0 20px 0; margin-bottom:20px; }
